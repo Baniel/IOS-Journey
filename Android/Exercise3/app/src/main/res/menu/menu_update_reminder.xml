@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.yandongzhang.week4listviewexercise.UpdateReminderActivity">
+    <item android:id="@+id/action_update" android:title="Back To Home"
+        android:orderInCategory="100" android:showAsAction="always" />
+</menu>

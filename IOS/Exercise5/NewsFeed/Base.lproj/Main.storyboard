@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ol2-Hd-34o">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--ABC News Feed-->
+        <scene sceneID="TuX-9a-RvA">
+            <objects>
+                <tableViewController id="zbH-la-Osi" customClass="NewsListTableViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" id="jEq-AG-qM6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="250" id="AmE-JO-jwP" customClass="NewsTableViewCell" customModule="NewsFeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AmE-JO-jwP" id="vim-i6-ftx">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="249"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="DQy-zv-bFv">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xls-Ji-js1">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="Ydd-yA-m1h"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Ydd-yA-m1h"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular">
+                                                <mask key="constraints">
+                                                    <include reference="Ydd-yA-m1h"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7j-3E-4Ij">
+                                            <rect key="frame" x="22" y="187" width="366" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DQy-zv-bFv" firstAttribute="leading" secondItem="vim-i6-ftx" secondAttribute="leading" id="EGO-I3-4P7"/>
+                                        <constraint firstAttribute="bottom" secondItem="DQy-zv-bFv" secondAttribute="bottom" id="Iuo-db-rda"/>
+                                        <constraint firstItem="xls-Ji-js1" firstAttribute="leading" secondItem="vim-i6-ftx" secondAttribute="leading" id="NeA-yI-cVR"/>
+                                        <constraint firstAttribute="trailing" secondItem="DQy-zv-bFv" secondAttribute="trailing" id="Yoe-qB-tH1"/>
+                                        <constraint firstItem="DQy-zv-bFv" firstAttribute="top" secondItem="vim-i6-ftx" secondAttribute="top" id="csf-8E-GcJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="xls-Ji-js1" secondAttribute="bottom" id="o2a-gk-O4L"/>
+                                        <constraint firstAttribute="trailing" secondItem="xls-Ji-js1" secondAttribute="trailing" id="syP-h2-mpN"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="DQy-zv-bFv"/>
+                                            <exclude reference="xls-Ji-js1"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="EGO-I3-4P7"/>
+                                            <exclude reference="Iuo-db-rda"/>
+                                            <exclude reference="Yoe-qB-tH1"/>
+                                            <exclude reference="csf-8E-GcJ"/>
+                                            <exclude reference="NeA-yI-cVR"/>
+                                            <exclude reference="o2a-gk-O4L"/>
+                                            <exclude reference="syP-h2-mpN"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular">
+                                        <mask key="subviews">
+                                            <include reference="DQy-zv-bFv"/>
+                                            <include reference="xls-Ji-js1"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="EGO-I3-4P7"/>
+                                            <include reference="Iuo-db-rda"/>
+                                            <include reference="Yoe-qB-tH1"/>
+                                            <include reference="csf-8E-GcJ"/>
+                                            <include reference="NeA-yI-cVR"/>
+                                            <include reference="o2a-gk-O4L"/>
+                                            <include reference="syP-h2-mpN"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newsPicture" destination="DQy-zv-bFv" id="Yr1-IP-CSC"/>
+                                    <outlet property="newsTitle" destination="p7j-3E-4Ij" id="OPY-7c-iqZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zbH-la-Osi" id="egv-d9-Dwq"/>
+                            <outlet property="delegate" destination="zbH-la-Osi" id="gbk-rD-eH3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ABC News Feed" id="KtH-Fm-JcL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWe-5r-RJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="400"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wKz-W8-0pd">
+            <objects>
+                <navigationController id="Ol2-Hd-34o" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AUL-jm-zHj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zbH-la-Osi" kind="relationship" relationship="rootViewController" id="nqN-bJ-PjU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtx-SJ-EZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-166" y="395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3" width="560" height="373"/>
+    </resources>
+</document>

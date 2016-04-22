@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="Reminder" representedClassName=".Reminder" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReminderList" syncable="YES"/>
+    </entity>
+    <entity name="ReminderList" representedClassName=".ReminderList" syncable="YES">
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reminder" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ReminderList" positionX="-45" positionY="0" width="128" height="60"/>
+        <element name="Reminder" positionX="-18" positionY="27" width="128" height="120"/>
+    </elements>
+</model>
